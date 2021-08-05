@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section-design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.design-main::after {
+  position: absolute;
+  content: "";
+  background-image: url(../../images/Shared/bg-pattern-leaf.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.section-design-container {
+  background: var(--Hero-Background-Color);
+  background-image: url(../../images/Shared/bg-pattern-call-to-action.svg);
+  background-position: right center;
+  background-repeat: no-repeat;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 95vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+  border-radius: var(--Border-Radius);
+  color: white;
+}
+
+.section-design-container h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+.section-design-container p {
+  font-size: 16px;
+  line-height: 26px;
+  width: 400px;
+  text-align: center;
+}
+
+.section-images {
+  padding: 150px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-image-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  width: 95vw;
+}
+
+.details-container {
+  height: 480px;
+  border-radius: var(--Border-Radius);
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.Express {
+  background-image: url(../../images/web-design/desktop/image-express.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Transfer {
+  background-image: url(../../images/web-design/desktop/image-transfer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Photon {
+  background-image: url(../../images/web-design/desktop/image-photon.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Builder {
+  background-image: url(../../images/web-design/desktop/image-builder.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Blogr {
+  background-image: url(../../images/web-design/desktop/image-blogr.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.camp {
+  background-image: url(../../images/web-design/desktop/image-camp.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.AirFilter {
+  background-image: url(../../images/app-design/desktop/image-airfilter.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Eyecam {
+  background-image: url(../../images/app-design/desktop/image-eyecam.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Faceit {
+  background-image: url(../../images/app-design/desktop/image-faceit.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Todo {
+  background-image: url(../../images/app-design/desktop/image-todo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Loop {
+  background-image: url(../../images/app-design/desktop/image-airfilter.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Tim {
+  background-image: url(../../images/graphic-design/desktop/image-change.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Boxed {
+  background-image: url(../../images/graphic-design/desktop/image-boxed-water.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.science {
+  background-image: url(../../images/graphic-design/desktop/image-science.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.details {
+  height: 350px;
+}
+
+.details-info {
+  background: #fdf3f0;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.details-info:hover {
+  transition: 0.3s ease-in-out;
+  background: #e7816b;
+  color: white;
+}
+
+.details-info:hover h3 {
+  color: white;
+}
+
+.details-info:hover p {
+  color: white;
+}
+
+.details-info h3 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  line-height: 26px;
+  color: #e7816b;
+  text-transform: uppercase;
+}
+
+.details-info p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #333136;
+  width: 286px;
+  text-align: center;
+}
+
+/* Link component */
+.section-link-designs {
+  width: 100%;
+  display: flex;
+}
+
+.section-link-container {
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  width: 95vw;
+}
+.section-link-container a {
+  color: white;
+}
+
+.app-designers {
+  background-image: url(../../images/Home/Desktop/image-app-design.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.graphic-designers {
+  background-image: url(../../images/Home/Desktop/image-graphic-design.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.web-designers {
+  background-image: url(../../images/Home/Desktop/image-web-design-large.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--Border-Radius);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 308px;
+}
+.section-link-container .link-container:hover ::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e7816b;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.section-link-container .link-container::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 99;
+}
+
+@media screen and (max-width: 982px) {
+  .section-image-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .design-main::after {
+    display: none;
+  }
+  .section-image-container {
+    grid-template-columns: 1fr;
+  }
+  .details-container {
+    flex-direction: row;
+    height: 310px;
+  }
+  .details {
+    height: 100%;
+    width: 100%;
+  }
+  .details-info {
+    height: 100%;
+    width: 100%;
+  }
+  .section-link-container {
+    grid-template-columns: 1fr;
+  }
+  .link-container {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .design-main {
+    margin-top: 70px;
+  }
+}
