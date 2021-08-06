@@ -1,5 +1,5 @@
-import React from "react";
-import Location from "../../component/Location";
+import React from 'react';
+import Location from '../../component/Location';
 
 function About() {
   return (
@@ -22,8 +22,8 @@ function About() {
 
       <section className="talent">
         <article className="talent-container">
-          <aside className="talent-img"></aside>
-          <aside className="talent-info-container ">
+          <aside data-aos="fade-up" className="talent-img"></aside>
+          <aside data-aos="fade-down" className="talent-info-container ">
             <h1>World-class talent</h1>
             <div>
               <p>
@@ -48,7 +48,7 @@ function About() {
 
       <section className="talent1">
         <article className="talent-container1">
-          <aside className="talent-info-container ">
+          <aside data-aos="fade-down" className="talent-info-container ">
             <h1>The real deal</h1>
             <div>
               <p>
@@ -66,7 +66,7 @@ function About() {
               </p>
             </div>
           </aside>
-          <aside className="talent-img1"></aside>
+          <aside data-aos="zoom-in" className="talent-img1"></aside>
         </article>
       </section>
     </main>

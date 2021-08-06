@@ -1,14 +1,14 @@
-import React from "react";
-import canada from "../images/Shared/illustration-canada.svg";
-import australia from "../images/Shared/illustration-australia.svg";
-import unitedK from "../images/Shared/illustration-united-kingdom.svg";
-import { Link } from "react-router-dom";
+import React from 'react';
+import canada from '../images/Shared/illustration-canada.svg';
+import australia from '../images/Shared/illustration-australia.svg';
+import unitedK from '../images/Shared/illustration-united-kingdom.svg';
+import { Link } from 'react-router-dom';
 
 function Location() {
   return (
     <section className="about-location">
       <article className="about-container">
-        <aside className="aside-container-location">
+        <aside data-aos="fade-left" className="aside-container-location">
           <div className="img-header media">
             <img src={canada} alt="canada" />
           </div>
@@ -20,7 +20,7 @@ function Location() {
           </div>
         </aside>
 
-        <aside className="aside-container-location">
+        <aside data-aos="fade-down" className="aside-container-location">
           <div className="img-header media">
             <img src={australia} alt="australia" />
           </div>
@@ -31,7 +31,7 @@ function Location() {
             </Link>
           </div>
         </aside>
-        <aside className="aside-container-location">
+        <aside data-aos="fade-left" className="aside-container-location">
           <div className="img-header media">
             <img src={unitedK} alt="United KingDom" />
           </div>

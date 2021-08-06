@@ -1,13 +1,13 @@
-import React from "react";
-import OverLay from "../../component/OverLay";
-import phone from "../../images/Home/Desktop/image-hero-phone.png";
-import arrow from "../../images/Shared/icon-right-arrow.svg";
-import passionate from "../../images/Home/Desktop/illustration-passionate.svg";
-import resource from "../../images/Home/Desktop/illustration-resourceful.svg";
-import friendly from "../../images/Home/Desktop/illustration-friendly.svg";
-import dataDesign from "../../dataDesign";
-import ScrollToTopDesign from "../../component/ScrollToTopDesign";
-import { Link } from "react-router-dom";
+import React from 'react';
+import OverLay from '../../component/OverLay';
+import phone from '../../images/Home/Desktop/image-hero-phone.png';
+import arrow from '../../images/Shared/icon-right-arrow.svg';
+import passionate from '../../images/Home/Desktop/illustration-passionate.svg';
+import resource from '../../images/Home/Desktop/illustration-resourceful.svg';
+import friendly from '../../images/Home/Desktop/illustration-friendly.svg';
+import dataDesign from '../../dataDesign';
+import ScrollToTopDesign from '../../component/ScrollToTopDesign';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const { graphicsDesign, appDesign, webDesign } = dataDesign;
@@ -38,11 +38,11 @@ function Home() {
           <Link
             className="web-designs"
             to={{
-              pathname: "/designs",
+              pathname: '/designs',
               state: webDesign,
             }}
           >
-            <article className="col-left container  ">
+            <article data-aos="fade-right" className="col-left container  ">
               <div className="article-info">
                 <h1>web design</h1>
                 <div className="arrow">
@@ -54,9 +54,10 @@ function Home() {
           </Link>
           <article className="col-right">
             <Link
+              data-aos="fade-left"
               className="app-designs container"
               to={{
-                pathname: "/designs",
+                pathname: '/designs',
                 state: appDesign,
               }}
             >
@@ -69,9 +70,10 @@ function Home() {
               </div>
             </Link>
             <Link
+              data-aos="fade-up"
               className="graphic-designs container"
               to={{
-                pathname: "/designs",
+                pathname: '/designs',
                 state: graphicsDesign,
               }}
             >
@@ -89,7 +91,7 @@ function Home() {
       {/* Home about */}
       <section className="about">
         <article className="about-container">
-          <aside className="aside-container">
+          <aside data-aos="fade-right" className="aside-container">
             <div className="img-header">
               <img src={passionate} alt="passionate" />
             </div>
@@ -102,7 +104,7 @@ function Home() {
               </p>
             </div>
           </aside>
-          <aside className="aside-container">
+          <aside data-aos="fade-up" className="aside-container">
             <div className="img-header">
               <img src={resource} alt="resourceful" />
             </div>
@@ -116,7 +118,7 @@ function Home() {
               </p>
             </div>
           </aside>
-          <aside className="aside-container">
+          <aside data-aos="fade-left" className="aside-container">
             <div className="img-header">
               <img src={friendly} alt="friendly" />
             </div>
