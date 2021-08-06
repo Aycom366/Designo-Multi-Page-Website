@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;400;500;700&display=swap');
 
 * {
-  font-family: "jost";
+  font-family: 'jost';
 }
 .section {
   width: 95vw;
@@ -22,7 +22,7 @@
 
 .section::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 30%;
   left: -10%;
   height: 100%;
@@ -85,7 +85,7 @@
 
 .phone {
   height: 550px;
-  width: 130%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -98,7 +98,7 @@
   object-fit: cover;
   position: absolute;
   top: -30%;
-  left: 27%;
+  left: 20%;
 }
 
 @media screen and (max-width: 1140px) {
@@ -204,7 +204,7 @@
 
 .section-container .container:hover ::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   width: 100%;
@@ -216,7 +216,7 @@
 
 .section-container .container::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   width: 100%;
@@ -356,7 +356,7 @@
 
 .about::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 30%;
   left: 30%;
   height: 200%;

@@ -31,6 +31,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   padding: 0px 95px;
+  height: 100%;
 }
 
 .general h1 {
@@ -70,23 +71,14 @@
 }
 
 .canada {
-  /* background-image: url(../../images/locations/desktop/image-map-canada.png);
-  background-size: cover;
-  background-position: no-repeat; */
   margin-left: 1rem;
 }
 
 .australia {
-  /* background-image: url(../../images/locations/desktop/image-map-australia.png);
-  background-size: cover;
-  background-position: no-repeat; */
   margin-right: 1rem;
 }
 
 .UK {
-  /* background-image: url(../../images/locations/desktop/image-map-united-kingdom.png);
-  background-size: cover;
-  background-position: no-repeat; */
   margin-left: 1rem;
 }
 
@@ -136,11 +128,44 @@
   .general {
     padding: 0px 10px;
   }
+  .country-container {
+    height: 714px;
+    margin: 0 auto;
+  }
+  .general {
+    height: 394px !important;
+    margin: 0;
+    align-items: center;
+  }
   .country-info-container {
     justify-content: space-between;
   }
+  .country-container1 {
+    margin: 40px auto;
+  }
   .country-info:nth-child(1) {
     margin-right: 0;
+  }
+
+  .location-img {
+    height: 320px !important;
+    margin: 0;
+  }
+
+  .general h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .country-info-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .country-info {
+    margin: 0;
+  }
+  .country-info:nth-child(1) {
+    margin-bottom: 24px;
   }
 }
 

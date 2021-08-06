@@ -1,9 +1,9 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import arrow from "../../images/Shared/icon-right-arrow.svg";
-import { Link } from "react-router-dom";
-import dataDesign from "../../dataDesign";
-import ScrollToTopDesign from "../../component/ScrollToTopDesign";
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import arrow from '../../images/Shared/icon-right-arrow.svg';
+import { Link } from 'react-router-dom';
+import dataDesign from '../../dataDesign';
+import ScrollToTopDesign from '../../component/ScrollToTopDesign';
 
 const { graphicsDesign, appDesign, webDesign } = dataDesign;
 
@@ -43,11 +43,11 @@ function Designs() {
         </section>
         <div className="section-link-designs">
           <div className="section-link-container">
-            {newTitle !== "Web Design" && (
+            {newTitle !== 'Web Design' && (
               <Link
                 className="web-designers link-container"
                 to={{
-                  pathname: "/designs",
+                  pathname: '/designs',
                   state: webDesign,
                 }}
               >
@@ -60,11 +60,11 @@ function Designs() {
                 </div>
               </Link>
             )}
-            {newTitle !== "App Design" && (
+            {newTitle !== 'App Design' && (
               <Link
                 className="app-designers link-container"
                 to={{
-                  pathname: "/designs",
+                  pathname: '/designs',
                   state: appDesign,
                 }}
               >
@@ -77,11 +77,11 @@ function Designs() {
                 </div>
               </Link>
             )}
-            {newTitle !== "Graphic Design" && (
+            {newTitle !== 'Graphic Design' && (
               <Link
                 className="graphic-designers link-container"
                 to={{
-                  pathname: "/designs",
+                  pathname: '/designs',
                   state: graphicsDesign,
                 }}
               >
