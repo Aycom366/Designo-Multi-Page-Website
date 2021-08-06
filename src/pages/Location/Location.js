@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useState } from 'react';
+import LocationMap from '../../component/LocationMap';
 
 function Location() {
+  const [canadaCoordinates, setcanadaCoordinates] = useState({
+    lat: '43.6532',
+    long: '-79.3832',
+  });
+
+  const [australiaCoordiantes, setaustraliaCoordiantes] = useState({
+    lat: '-38.733826 ',
+    long: '143.6872713',
+  });
+
+  const [UkCoordiantes, setUkCoordiantes] = useState({
+    lat: '39.113014',
+    long: '-105.358887',
+  });
+
   return (
     <main className="main-location">
       <section className="country-container">
@@ -22,20 +38,24 @@ function Location() {
             </div>
           </div>
         </article>
-        <article className="location-img canada"></article>
+        <article className="location-img canada">
+          <LocationMap cordinate={canadaCoordinates} />
+        </article>
       </section>
 
       <section className="country-container1 ">
-        <article className="location-img australia"></article>
+        <article className="location-img australia">
+          <LocationMap cordinate={australiaCoordiantes} />
+        </article>
         <article className="australia-container-info general">
           <h1>Australia</h1>
           <div className="country-info-container">
             <div className="country-info">
               <h3>Designo AU office</h3>
               <p>
-                3886 Wellington Street
+                19 Ballone Street
                 <br />
-                Toronto, Ontario M9C 3J5
+                New South Wales 2443
               </p>
             </div>
             <div className="country-info">
@@ -66,7 +86,9 @@ function Location() {
             </div>
           </div>
         </article>
-        <article className="location-img UK"></article>
+        <article className="location-img UK">
+          <LocationMap cordinate={UkCoordiantes} />
+        </article>
       </section>
     </main>
   );

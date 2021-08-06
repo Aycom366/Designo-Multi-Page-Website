@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;400;500;700&display=swap');
 
 .main-location {
   width: 100%;
@@ -70,23 +70,23 @@
 }
 
 .canada {
-  background-image: url(../../images/locations/desktop/image-map-canada.png);
+  /* background-image: url(../../images/locations/desktop/image-map-canada.png);
   background-size: cover;
-  background-position: no-repeat;
+  background-position: no-repeat; */
   margin-left: 1rem;
 }
 
 .australia {
-  background-image: url(../../images/locations/desktop/image-map-australia.png);
+  /* background-image: url(../../images/locations/desktop/image-map-australia.png);
   background-size: cover;
-  background-position: no-repeat;
+  background-position: no-repeat; */
   margin-right: 1rem;
 }
 
 .UK {
-  background-image: url(../../images/locations/desktop/image-map-united-kingdom.png);
+  /* background-image: url(../../images/locations/desktop/image-map-united-kingdom.png);
   background-size: cover;
-  background-position: no-repeat;
+  background-position: no-repeat; */
   margin-left: 1rem;
 }
 
