@@ -6,7 +6,7 @@ function About() {
     <main className="main-about">
       <section className="about-hero">
         <article className="about-hero-container">
-          <aside className="about-info-container">
+          <aside data-aos="fade-right" className="about-info-container">
             <h1>About us</h1>
             <p>
               Founded in 2010, we are a creative agency that produces lasting
@@ -16,7 +16,7 @@ function About() {
               and digital experiences that connect with our clients’ audiences.
             </p>
           </aside>
-          <aside className="about-img"></aside>
+          <aside data-aos="zoom-in" className="about-img"></aside>
         </article>
       </section>
 

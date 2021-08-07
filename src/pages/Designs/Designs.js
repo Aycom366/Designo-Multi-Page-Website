@@ -21,7 +21,7 @@ function Designs() {
 
       <main class="design-main">
         <section className="section-design">
-          <article className="section-design-container">
+          <article data-aos="zoom-in" className="section-design-container">
             <h1>{location.state.title}</h1>
             <p>{location.state.subTitle}</p>
           </article>
@@ -30,7 +30,11 @@ function Designs() {
           <div className="section-image-container">
             {location.state.infoArray.map((item, index) => {
               return (
-                <article key={index} className="details-container">
+                <article
+                  key={index}
+                  data-aos={`${index % 2 === 1 ? 'fade-right' : 'flip-up'}`}
+                  className="details-container"
+                >
                   <div className={` ${item.name} details `}></div>
                   <div className="details-info">
                     <h3>{item.name}</h3>
@@ -45,6 +49,7 @@ function Designs() {
           <div className="section-link-container">
             {newTitle !== 'Web Design' && (
               <Link
+                data-aos="fade-left"
                 className="web-designers link-container"
                 to={{
                   pathname: '/designs',
@@ -62,6 +67,7 @@ function Designs() {
             )}
             {newTitle !== 'App Design' && (
               <Link
+                data-aos="zoom-in"
                 className="app-designers link-container"
                 to={{
                   pathname: '/designs',
@@ -79,6 +85,7 @@ function Designs() {
             )}
             {newTitle !== 'Graphic Design' && (
               <Link
+                data-aos="fade-left"
                 className="graphic-designers link-container"
                 to={{
                   pathname: '/designs',

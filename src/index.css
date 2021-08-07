@@ -3,6 +3,7 @@
 @import './pages/Designs/Designs.css';
 @import './pages/About/About.css';
 @import './pages/Location/Location.css';
+@import './pages/Contact/Contact.css';
 
 * {
   margin: 0;

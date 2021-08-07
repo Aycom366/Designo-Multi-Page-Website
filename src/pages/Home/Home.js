@@ -15,7 +15,7 @@ function Home() {
     <>
       <ScrollToTopDesign />
       <section className="section">
-        <article className="section-left">
+        <article data-aos="fade-up" className="section-left">
           <h1>Award-winning custom designs and digital branding solutions</h1>
           <p>
             With over 10 years in the industry, we are experienced in creating
@@ -26,7 +26,7 @@ function Home() {
             <button className="learnmore">Learn more</button>
           </Link>
         </article>
-        <article className="section-right">
+        <article data-aos="fade-right" className="section-right">
           <div className="phone">
             <img src={phone} alt="Phone" />
           </div>

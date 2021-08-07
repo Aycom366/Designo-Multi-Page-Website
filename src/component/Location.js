@@ -8,7 +8,11 @@ function Location() {
   return (
     <section className="about-location">
       <article className="about-container">
-        <aside data-aos="fade-left" className="aside-container-location">
+        <aside
+          style={{ overflow: 'hidden' }}
+          data-aos="fade-left"
+          className="aside-container-location"
+        >
           <div className="img-header media">
             <img src={canada} alt="canada" />
           </div>
@@ -20,7 +24,11 @@ function Location() {
           </div>
         </aside>
 
-        <aside data-aos="fade-down" className="aside-container-location">
+        <aside
+          style={{ overflow: 'hidden' }}
+          data-aos="fade-down"
+          className="aside-container-location"
+        >
           <div className="img-header media">
             <img src={australia} alt="australia" />
           </div>
@@ -31,7 +39,11 @@ function Location() {
             </Link>
           </div>
         </aside>
-        <aside data-aos="fade-left" className="aside-container-location">
+        <aside
+          style={{ overflow: 'hidden' }}
+          data-aos="fade-left"
+          className="aside-container-location"
+        >
           <div className="img-header media">
             <img src={unitedK} alt="United KingDom" />
           </div>

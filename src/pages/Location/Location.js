@@ -20,7 +20,10 @@ function Location() {
   return (
     <main className="main-location">
       <section className="country-container">
-        <article className="canada-container-info general">
+        <article
+          data-aos="fade-right"
+          className="canada-container-info general"
+        >
           <h1>Canada</h1>
           <div className="country-info-container">
             <div className="country-info">
@@ -38,16 +41,19 @@ function Location() {
             </div>
           </div>
         </article>
-        <article className="location-img canada">
+        <article data-aos="fade-left" className="location-img canada">
           <LocationMap cordinate={canadaCoordinates} />
         </article>
       </section>
 
       <section className="country-container1 ">
-        <article className="location-img australia">
+        <article data-aos="fade-right" className="location-img australia">
           <LocationMap cordinate={australiaCoordiantes} />
         </article>
-        <article className="australia-container-info general">
+        <article
+          data-aos="fade-left"
+          className="australia-container-info general"
+        >
           <h1>Australia</h1>
           <div className="country-info-container">
             <div className="country-info">
@@ -68,7 +74,7 @@ function Location() {
       </section>
 
       <section className="country-container">
-        <article className="UK-container-info general">
+        <article data-aos="fade-right" className="UK-container-info general">
           <h1>United Kingdom</h1>
           <div className="country-info-container">
             <div className="country-info">
@@ -86,7 +92,7 @@ function Location() {
             </div>
           </div>
         </article>
-        <article className="location-img UK">
+        <article data-aos="fade-left" className="location-img UK">
           <LocationMap cordinate={UkCoordiantes} />
         </article>
       </section>

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;400;500;700&display=swap');
+
+.contact h1 {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 48px;
+  margin-bottom: 32px;
+
+  color: white;
+}
+
+.contact p {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: white;
+}
+
+.contact input {
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.main-contact {
+  width: 100%;
+  height: 100%;
+}
+
+.contact {
+  width: 100%;
+  height: auto;
+}
+
+.contact-container {
+  background: #e7816b;
+  border-radius: var(--Border-Radius);
+  height: 480px;
+  display: flex;
+  padding: 0 96px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 95vw;
+}
+.contact-details {
+  background-image: url(../../images/Shared/bg-pattern-small-circle.svg);
+  background-size: contain;
+  background-position: right top center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  flex-basis: 60%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 95px;
+}
+
+.contact-information {
+  flex-basis: 40%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 982px) {
+  .contact h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .contact p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-contact {
+    margin-top: 90px;
+  }
+}
