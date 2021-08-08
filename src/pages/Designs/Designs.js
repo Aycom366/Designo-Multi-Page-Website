@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import arrow from '../../images/Shared/icon-right-arrow.svg';
 import { Link } from 'react-router-dom';
 import dataDesign from '../../dataDesign';
 import ScrollToTopDesign from '../../component/ScrollToTopDesign';
+import { useGlobalContext } from '../../context';
 
 const { graphicsDesign, appDesign, webDesign } = dataDesign;
 
 function Designs() {
   let location = useLocation();
 
+  const { setLocate } = useGlobalContext();
+
+  useEffect(() => {
+    setLocate(location);
+  }, [location]);
+
   //to use for page navigation
   const newTitle = location.state.title;
-  if (!location.state) {
-    return <div>error</div>;
-  }
   return (
     <>
       <ScrollToTopDesign location={location} />

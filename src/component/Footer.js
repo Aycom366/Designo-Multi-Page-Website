@@ -1,16 +1,26 @@
-import React from "react";
-import logo from "../images/Shared/logo-light.png";
-import Navbar from "./Navbar";
-import facebook from "../images/Shared/icon-facebook.svg";
-import instagram from "../images/Shared/icon-instagram.svg";
-import twitter from "../images/Shared/icon-twitter.svg";
-import pinterest from "../images/Shared/icon-pinterest.svg";
-import youtube from "../images/Shared/icon-youtube.svg";
+import React, { useEffect } from 'react';
+import logo from '../images/Shared/logo-light.png';
+import Navbar from './Navbar';
+import facebook from '../images/Shared/icon-facebook.svg';
+import instagram from '../images/Shared/icon-instagram.svg';
+import twitter from '../images/Shared/icon-twitter.svg';
+import pinterest from '../images/Shared/icon-pinterest.svg';
+import youtube from '../images/Shared/icon-youtube.svg';
+import { useGlobalContext } from '../context.js';
+import { Link } from 'react-router-dom';
 
 function Footer() {
+  const { isContactPage } = useGlobalContext();
+
   return (
-    <footer className="footer">
-      <section className="footer-container">
+    <footer className={`${isContactPage ? ' footer footerContact' : 'footer'}`}>
+      <section
+        className={`${
+          isContactPage
+            ? 'footer-container footerContainer'
+            : 'footer-container'
+        }`}
+      >
         <article className="footer-nav">
           <Navbar logoLight={logo} />
         </article>
@@ -35,21 +45,27 @@ function Footer() {
             <img src={instagram} alt="Designo Instagram" />
           </div>
         </article>
-        <section className="talk-about">
-          <div className="talk-left">
-            <h1>
-              Let's talk about
-              <br /> your projects
-            </h1>
-            <p>
-              ready to take it to the next level? contact us today and find out
-              <br /> how our expertise can help your business grow
-            </p>
-          </div>
-          <div className="talk-right">
-            <button className="learnmore">GET IN TOUCH</button>
-          </div>
-        </section>
+
+        {/* check if it the contact page to remove the learnmore */}
+
+        {!isContactPage && (
+          <section className="talk-about">
+            <div className="talk-left">
+              <h1>
+                Let's talk about
+                <br /> your projects
+              </h1>
+              <p>
+                ready to take it to the next level? contact us today and find
+                out
+                <br /> how our expertise can help your business grow
+              </p>
+            </div>
+            <Link to="/contact" className="talk-right">
+              <button className="learnmore">GET IN TOUCH</button>
+            </Link>
+          </section>
+        )}
       </section>
     </footer>
   );

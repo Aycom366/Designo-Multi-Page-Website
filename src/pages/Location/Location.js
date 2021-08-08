@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LocationMap from '../../component/LocationMap';
+import { useLocation } from 'react-router-dom';
+import { useGlobalContext } from '../../context';
 
 function Location() {
+  let currrentLocation = useLocation();
+  const { setLocate } = useGlobalContext();
+
+  useEffect(() => {
+    setLocate(currrentLocation);
+  }, [currrentLocation]);
+
   const [canadaCoordinates, setcanadaCoordinates] = useState({
     lat: '43.6532',
     long: '-79.3832',

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import OverLay from '../../component/OverLay';
 import phone from '../../images/Home/Desktop/image-hero-phone.png';
 import arrow from '../../images/Shared/icon-right-arrow.svg';
@@ -8,8 +8,17 @@ import friendly from '../../images/Home/Desktop/illustration-friendly.svg';
 import dataDesign from '../../dataDesign';
 import ScrollToTopDesign from '../../component/ScrollToTopDesign';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useGlobalContext } from '../../context';
 
 function Home() {
+  let currrentLocation = useLocation();
+  const { setLocate } = useGlobalContext();
+
+  useEffect(() => {
+    setLocate(currrentLocation);
+  }, [currrentLocation]);
+
   const { graphicsDesign, appDesign, webDesign } = dataDesign;
   return (
     <>
