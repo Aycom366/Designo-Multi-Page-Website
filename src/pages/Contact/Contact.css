@@ -233,10 +233,7 @@ textarea::placeholder {
     flex-basis: 100%;
   }
   .contact-details::after {
-    left: -30%;
-    top: -100%;
-    width: 300%;
-    height: 400%;
+    display: none;
   }
 }
 
@@ -253,16 +250,8 @@ textarea::placeholder {
   .contact-details {
     text-align: center;
     width: 100%;
-    z-index: 1;
   }
   .contact-details::after {
-    background-image: url(../../images/contact/mobile/bg-pattern-hero-contact-mobile.svg);
-    background-position: center;
-    background-size: cover;
-    height: 400%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    display: none;
   }
 }

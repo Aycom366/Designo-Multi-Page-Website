@@ -14,13 +14,21 @@ function Contact() {
 
   //creating an object for the contactInfo;
   const [contactInfo, setcontactInfo] = useState({
-    fullName: '',
+    fullname: '',
     email: '',
     phone: '',
     message: '',
   });
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setcontactInfo({ ...contactInfo, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <main className="main-contact">
@@ -42,6 +50,7 @@ function Contact() {
           >
             <section className="forminformation">
               <form
+                onSubmit={handleSubmit}
                 data-aos="fade-left"
                 data-aos-delay="500"
                 className="form-inputs"
@@ -51,7 +60,7 @@ function Contact() {
                   onChange={handleChange}
                   placeholder="Full Name"
                   type="text"
-                  name="FullName"
+                  name="fullname"
                   autoComplete="off"
                 />
                 <p className="error-Info">
@@ -60,6 +69,7 @@ function Contact() {
                 </p>
               </form>
               <form
+                onSubmit={handleSubmit}
                 data-aos="fade-left"
                 data-aos-delay="750"
                 className="form-inputs"
@@ -78,6 +88,7 @@ function Contact() {
                 </p>
               </form>
               <form
+                onSubmit={handleSubmit}
                 data-aos="fade-left"
                 data-aos-delay="1000"
                 className="form-inputs"
@@ -96,6 +107,7 @@ function Contact() {
                 </p>
               </form>
               <form
+                onSubmit={handleSubmit}
                 data-aos="fade-left"
                 data-aos-delay="1250"
                 className="form-input "
