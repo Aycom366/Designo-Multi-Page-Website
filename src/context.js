@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from "react";
 
 const AppContext = React.createContext();
 
@@ -17,7 +16,7 @@ export const AppProvider = ({ children }) => {
     if (!pathname) return;
     else {
       const pageName = pathname.slice(1);
-      if (pageName === 'contact') {
+      if (pageName === "contact") {
         setisContactPage(true);
       } else {
         setisContactPage(false);

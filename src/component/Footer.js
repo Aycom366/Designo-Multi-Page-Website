@@ -1,24 +1,24 @@
-import React, { useEffect } from 'react';
-import logo from '../images/Shared/logo-light.png';
-import Navbar from './Navbar';
-import facebook from '../images/Shared/icon-facebook.svg';
-import instagram from '../images/Shared/icon-instagram.svg';
-import twitter from '../images/Shared/icon-twitter.svg';
-import pinterest from '../images/Shared/icon-pinterest.svg';
-import youtube from '../images/Shared/icon-youtube.svg';
-import { useGlobalContext } from '../context.js';
-import { Link } from 'react-router-dom';
+import React from "react";
+import logo from "../images/Shared/logo-light.png";
+import Navbar from "./Navbar";
+import facebook from "../images/Shared/icon-facebook.svg";
+import instagram from "../images/Shared/icon-instagram.svg";
+import twitter from "../images/Shared/icon-twitter.svg";
+import pinterest from "../images/Shared/icon-pinterest.svg";
+import youtube from "../images/Shared/icon-youtube.svg";
+import { useGlobalContext } from "../context.js";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const { isContactPage } = useGlobalContext();
 
   return (
-    <footer className={`${isContactPage ? ' footer footerContact' : 'footer'}`}>
+    <footer className={`${isContactPage ? " footer footerContact" : "footer"}`}>
       <section
         className={`${
           isContactPage
-            ? 'footer-container footerContainer'
-            : 'footer-container'
+            ? "footer-container footerContainer"
+            : "footer-container"
         }`}
       >
         <article className="footer-nav">
