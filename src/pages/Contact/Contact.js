@@ -1,33 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import ErrorIcon from '../../images/contact/desktop/icon-error.svg';
-import { useGlobalContext } from '../../context.js';
-import Location from '../../component/Location';
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import ErrorIcon from "../../images/contact/desktop/icon-error.svg";
+import { useGlobalContext } from "../../context.js";
+import Location from "../../component/Location";
+import { useForm } from "react-hook-form";
 
 function Contact() {
   let currrentLocation = useLocation();
   const { setLocate } = useGlobalContext();
-
   useEffect(() => {
     setLocate(currrentLocation);
   }, [currrentLocation]);
 
-  //creating an object for the contactInfo;
-  const [contactInfo, setcontactInfo] = useState({
-    fullname: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    trigger,
+    reset,
+  } = useForm();
 
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setcontactInfo({ ...contactInfo, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  //getting the data objects when the button is clicked
+  const onSubmit = (e) => {
+    console.log(e);
+    reset();
   };
 
   return (
@@ -48,87 +44,96 @@ function Contact() {
             data-aos-delay="250"
             className="contact-information"
           >
-            <section className="forminformation">
-              <form
-                onSubmit={handleSubmit}
+            <form className="forminformation" onSubmit={handleSubmit(onSubmit)}>
+              <aside
                 data-aos="fade-left"
                 data-aos-delay="500"
                 className="form-inputs"
               >
                 <input
-                  value={contactInfo.fullName}
-                  onChange={handleChange}
                   placeholder="Full Name"
                   type="text"
-                  name="fullname"
-                  autoComplete="off"
+                  autoComplete="new-name"
+                  {...register("name", { required: "can't be empty" })}
+                  onKeyUp={() => trigger("name")}
                 />
-                <p className="error-Info">
-                  <em>can't be empty</em>
-                  <img src={ErrorIcon} alt="ErrorIcon" />
-                </p>
-              </form>
-              <form
-                onSubmit={handleSubmit}
+                {errors.name && (
+                  <p className="error-Info ">
+                    <em>{errors.name.message}</em>
+                    <img src={ErrorIcon} alt="ErrorIcon" />
+                  </p>
+                )}
+              </aside>
+              <aside
                 data-aos="fade-left"
                 data-aos-delay="750"
                 className="form-inputs"
               >
                 <input
-                  value={contactInfo.email}
-                  onChange={handleChange}
                   placeholder="Email"
                   type="email"
-                  name="email"
-                  autoComplete="off"
+                  autoComplete="tuber"
+                  {...register("email", {
+                    required: "can't be empty",
+                    pattern: {
+                      value:
+                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                      message: "email not valid!",
+                    },
+                  })}
+                  onKeyUp={() => trigger("email")}
                 />
-                <p className="error-Info">
-                  <em>can't be empty</em>
-                  <img src={ErrorIcon} alt="ErrorIcon" />
-                </p>
-              </form>
-              <form
-                onSubmit={handleSubmit}
+                {errors.email && (
+                  <p className="error-Info">
+                    <em>{errors.email.message}</em>
+                    <img src={ErrorIcon} alt="ErrorIcon" />
+                  </p>
+                )}
+              </aside>
+              <aside
                 data-aos="fade-left"
                 data-aos-delay="1000"
                 className="form-inputs"
               >
                 <input
-                  value={contactInfo.phone}
-                  onChange={handleChange}
                   placeholder="Phone"
                   type="text"
                   name="phone"
-                  autoComplete="off"
+                  autoComplete=""
+                  {...register("phone", { required: "can't be empty" })}
+                  onKeyUp={() => trigger("phone")}
                 />
-                <p className="error-Info">
-                  <em>can't be empty</em>
-                  <img src={ErrorIcon} alt="ErrorIcon" />
-                </p>
-              </form>
-              <form
-                onSubmit={handleSubmit}
+                {errors.phone && (
+                  <p className="error-Info">
+                    <em>{errors.phone.message}</em>
+                    <img src={ErrorIcon} alt="ErrorIcon" />
+                  </p>
+                )}
+              </aside>
+              <aside
                 data-aos="fade-left"
                 data-aos-delay="1250"
                 className="form-input "
               >
                 <textarea
-                  value={contactInfo.message}
-                  onChange={handleChange}
                   placeholder="Your Message"
                   type="text"
                   name="message"
                   autoComplete="off"
+                  {...register("message", { required: "can't be empty" })}
+                  onKeyUp={() => trigger("message")}
                 />
-                <p className="error-Info">
-                  <em>can't be empty</em>
-                  <img src={ErrorIcon} alt="ErrorIcon" />
-                </p>
-              </form>
+                {errors.message && (
+                  <p className="error-Info">
+                    <em>{errors.message.message}</em>
+                    <img src={ErrorIcon} alt="ErrorIcon" />
+                  </p>
+                )}
+              </aside>
               <div className="submit">
                 <button type="submit">Submit</button>
               </div>
-            </section>
+            </form>
           </article>
         </section>
       </section>

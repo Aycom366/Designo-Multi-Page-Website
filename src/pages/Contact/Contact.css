@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;400;500;700&display=swap");
 
 .contact h1 {
   font-size: 48px;
@@ -58,7 +58,7 @@
 }
 
 .contact-details::after {
-  content: '';
+  content: "";
   background-image: url(../../images/contact/desktop/bg-pattern-hero-desktop.svg);
   background-size: contain;
   background-position: left center;
@@ -88,13 +88,17 @@
   align-items: center;
 }
 
+.forminformation aside:focus-within {
+  border-bottom: 2px solid white;
+}
+
 .form-inputs {
   display: flex;
   width: 100%;
   justify-content: space-between;
   padding: 20px 10px;
   border-bottom: 1px solid white;
-  height: 38px;
+  height: 45px;
   align-items: center;
   overflow: hidden;
   padding-top: 0;
@@ -107,7 +111,7 @@
   padding: 20px 10px;
   border-bottom: 1px solid white;
   height: 102px;
-  align-items: center;
+  align-items: flex-start;
   overflow: hidden;
   padding-top: 0;
   margin-bottom: 25px;
@@ -117,23 +121,11 @@ textarea {
   height: 100%;
 }
 
-.form-inputs p {
-  width: 170px;
-}
-
 .error-Info {
+  width: 150px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: 0.5s ease-in-out;
-  opacity: 0;
-  transform: translateX(1000%);
-}
-
-.show-error {
-  transform: translateX(0);
-  opacity: 1;
-  transition: 0.5s ease-in-out;
 }
 
 .error-Info em {
@@ -142,7 +134,7 @@ textarea {
 }
 
 .form-inputs:not(:last-child) {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 input,
 textarea {
@@ -155,10 +147,6 @@ textarea {
   font-weight: 500;
   line-height: 26px;
   margin-right: 5px;
-}
-
-.form-input input:focus {
-  border-bottom: 2px solid black;
 }
 
 input::placeholder,
