@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react';
-import Location from '../../component/Location';
-import { useLocation } from 'react-router-dom';
-import { useGlobalContext } from '../../context';
+import React, { useEffect } from "react";
+import Location from "../../component/Location";
+import { useLocation } from "react-router-dom";
+import { useGlobalContext } from "../../context";
 
 function About() {
   let currentLocation = useLocation();
   const { setLocate } = useGlobalContext();
-
   useEffect(() => {
     setLocate(currentLocation);
   }, [currentLocation]);

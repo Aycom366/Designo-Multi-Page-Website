@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import ErrorIcon from "../../images/contact/desktop/icon-error.svg";
 import { useGlobalContext } from "../../context.js";
@@ -18,11 +18,16 @@ function Contact() {
     formState: { errors },
     trigger,
     reset,
+    setFocus,
   } = useForm();
 
+  useEffect(() => {
+    setFocus("name");
+  }, []);
+
   //getting the data objects when the button is clicked
-  const onSubmit = (e) => {
-    console.log(e);
+  const onSubmit = (data) => {
+    console.log(data);
     reset();
   };
 
@@ -98,7 +103,6 @@ function Contact() {
                 <input
                   placeholder="Phone"
                   type="text"
-                  name="phone"
                   autoComplete=""
                   {...register("phone", { required: "can't be empty" })}
                   onKeyUp={() => trigger("phone")}
@@ -118,7 +122,6 @@ function Contact() {
                 <textarea
                   placeholder="Your Message"
                   type="text"
-                  name="message"
                   autoComplete="off"
                   {...register("message", { required: "can't be empty" })}
                   onKeyUp={() => trigger("message")}
