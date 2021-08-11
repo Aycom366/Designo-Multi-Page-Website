@@ -59,7 +59,7 @@ function Contact() {
                   placeholder="Full Name"
                   type="text"
                   autoComplete="new-name"
-                  {...register("name", { required: "can't be empty" })}
+                  {...register("name", { required: "name can't be empty" })}
                   onKeyUp={() => trigger("name")}
                 />
                 {errors.name && (
@@ -79,11 +79,11 @@ function Contact() {
                   type="email"
                   autoComplete="tuber"
                   {...register("email", {
-                    required: "can't be empty",
+                    required: "email can't be empty",
                     pattern: {
                       value:
                         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                      message: "email not valid!",
+                      message: "provide a valid email",
                     },
                   })}
                   onKeyUp={() => trigger("email")}
@@ -104,7 +104,7 @@ function Contact() {
                   placeholder="Phone"
                   type="text"
                   autoComplete=""
-                  {...register("phone", { required: "can't be empty" })}
+                  {...register("phone", { required: "phone can't be empty" })}
                   onKeyUp={() => trigger("phone")}
                 />
                 {errors.phone && (
@@ -123,7 +123,9 @@ function Contact() {
                   placeholder="Your Message"
                   type="text"
                   autoComplete="off"
-                  {...register("message", { required: "can't be empty" })}
+                  {...register("message", {
+                    required: "message can't be empty",
+                  })}
                   onKeyUp={() => trigger("message")}
                 />
                 {errors.message && (
