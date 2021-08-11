@@ -129,7 +129,7 @@ function Contact() {
                   onKeyUp={() => trigger("message")}
                 />
                 {errors.message && (
-                  <p className="error-Info">
+                  <p style={{ width: "220px" }} className="error-Info">
                     <em>{errors.message.message}</em>
                     <img src={ErrorIcon} alt="ErrorIcon" />
                   </p>
