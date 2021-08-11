@@ -32,7 +32,7 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://vercel.com/aycom366/designo-multi-page-website)
 
 ### Built with
 
@@ -49,8 +49,8 @@ This is a solution to the [Designo agency website challenge on Frontend Mentor](
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Temitayo](https://www.your-site.com)
+- Frontend Mentor - [@Aycom366](https://www.frontendmentor.io/profile/Aycom366)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
 
