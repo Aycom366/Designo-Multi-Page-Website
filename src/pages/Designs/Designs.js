@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import arrow from '../../images/Shared/icon-right-arrow.svg';
-import { Link } from 'react-router-dom';
-import dataDesign from '../../dataDesign';
-import ScrollToTopDesign from '../../component/ScrollToTopDesign';
-import { useGlobalContext } from '../../context';
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import arrow from "../../images/Shared/icon-right-arrow.svg";
+import { Link } from "react-router-dom";
+import dataDesign from "../../dataDesign";
+import ScrollToTopDesign from "../../component/ScrollToTopDesign";
+import { useGlobalContext } from "../../context";
 
 const { graphicsDesign, appDesign, webDesign } = dataDesign;
 
@@ -36,7 +36,7 @@ function Designs() {
               return (
                 <article
                   key={index}
-                  data-aos={`${index % 2 === 1 ? 'fade-right' : 'flip-up'}`}
+                  data-aos={`${index % 2 === 1 ? "fade-right" : "flip-up"}`}
                   className="details-container"
                 >
                   <div className={` ${item.name} details `}></div>
@@ -49,14 +49,15 @@ function Designs() {
             })}
           </div>
         </section>
-        <div className="section-link-designs">
+        <div style={{ overflow: "hidden" }} className="section-link-designs">
           <div className="section-link-container">
-            {newTitle !== 'Web Design' && (
+            {newTitle !== "Web Design" && (
               <Link
+                style={{ overflow: "hidden" }}
                 data-aos="fade-left"
                 className="web-designers link-container"
                 to={{
-                  pathname: '/designs',
+                  pathname: "/designs",
                   state: webDesign,
                 }}
               >
@@ -69,12 +70,12 @@ function Designs() {
                 </div>
               </Link>
             )}
-            {newTitle !== 'App Design' && (
+            {newTitle !== "App Design" && (
               <Link
                 data-aos="zoom-in"
                 className="app-designers link-container"
                 to={{
-                  pathname: '/designs',
+                  pathname: "/designs",
                   state: appDesign,
                 }}
               >
@@ -87,12 +88,12 @@ function Designs() {
                 </div>
               </Link>
             )}
-            {newTitle !== 'Graphic Design' && (
+            {newTitle !== "Graphic Design" && (
               <Link
                 data-aos="fade-left"
                 className="graphic-designers link-container"
                 to={{
-                  pathname: '/designs',
+                  pathname: "/designs",
                   state: graphicsDesign,
                 }}
               >
