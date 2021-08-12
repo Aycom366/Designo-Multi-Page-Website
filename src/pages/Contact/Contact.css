@@ -151,7 +151,7 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-  opacity: 50%;
+  opacity: 0.5;
   color: white;
 }
 
