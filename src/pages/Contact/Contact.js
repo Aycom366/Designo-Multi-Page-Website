@@ -50,11 +50,7 @@ function Contact() {
             className="contact-information"
           >
             <form className="forminformation" onSubmit={handleSubmit(onSubmit)}>
-              <aside
-                data-aos="fade-left"
-                data-aos-delay="500"
-                className="form-inputs"
-              >
+              <aside className="form-inputs">
                 <input
                   placeholder="Full Name"
                   type="text"
@@ -69,11 +65,7 @@ function Contact() {
                   </p>
                 )}
               </aside>
-              <aside
-                data-aos="fade-left"
-                data-aos-delay="750"
-                className="form-inputs"
-              >
+              <aside className="form-inputs">
                 <input
                   placeholder="Email"
                   type="email"
@@ -95,11 +87,7 @@ function Contact() {
                   </p>
                 )}
               </aside>
-              <aside
-                data-aos="fade-left"
-                data-aos-delay="1000"
-                className="form-inputs"
-              >
+              <aside className="form-inputs">
                 <input
                   placeholder="Phone"
                   type="text"
@@ -114,11 +102,7 @@ function Contact() {
                   </p>
                 )}
               </aside>
-              <aside
-                data-aos="fade-left"
-                data-aos-delay="1250"
-                className="form-input "
-              >
+              <aside className="form-input ">
                 <textarea
                   placeholder="Your Message"
                   type="text"
