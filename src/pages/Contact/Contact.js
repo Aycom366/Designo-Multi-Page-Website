@@ -35,7 +35,7 @@ function Contact() {
     <main className="main-contact">
       <section className="contact">
         <section className="contact-container">
-          <article data-aos="fade-right" className="contact-details">
+          <article  className="contact-details">
             <h1>Contact Us</h1>
             <p>
               Ready to take it to the next level? Let’s talk about your project
@@ -45,10 +45,9 @@ function Contact() {
             </p>
           </article>
           <article
-            data-aos="fade-left"
-            data-aos-delay="250"
+           
             className="contact-information"
-            style={{ overflow: "hidden" }}
+           
           >
             <form className="forminformation" onSubmit={handleSubmit(onSubmit)}>
               <aside className="form-inputs">
