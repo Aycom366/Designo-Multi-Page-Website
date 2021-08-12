@@ -48,6 +48,7 @@ function Contact() {
             data-aos="fade-left"
             data-aos-delay="250"
             className="contact-information"
+            style={{ overflow: "hidden" }}
           >
             <form className="forminformation" onSubmit={handleSubmit(onSubmit)}>
               <aside className="form-inputs">

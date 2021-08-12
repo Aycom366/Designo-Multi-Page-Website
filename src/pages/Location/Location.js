@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import LocationMap from '../../component/LocationMap';
-import { useLocation } from 'react-router-dom';
-import { useGlobalContext } from '../../context';
+import React, { useState, useEffect } from "react";
+import LocationMap from "../../component/LocationMap";
+import { useLocation } from "react-router-dom";
+import { useGlobalContext } from "../../context";
 
 function Location() {
   let currrentLocation = useLocation();
@@ -12,24 +12,25 @@ function Location() {
   }, [currrentLocation]);
 
   const [canadaCoordinates, setcanadaCoordinates] = useState({
-    lat: '43.6532',
-    long: '-79.3832',
+    lat: "43.6532",
+    long: "-79.3832",
   });
 
   const [australiaCoordiantes, setaustraliaCoordiantes] = useState({
-    lat: '-38.733826 ',
-    long: '143.6872713',
+    lat: "-38.733826 ",
+    long: "143.6872713",
   });
 
   const [UkCoordiantes, setUkCoordiantes] = useState({
-    lat: '39.113014',
-    long: '-105.358887',
+    lat: "39.113014",
+    long: "-105.358887",
   });
 
   return (
     <main className="main-location">
       <section className="country-container">
         <article
+          style={{ overflow: "hidden" }}
           data-aos="fade-right"
           className="canada-container-info general"
         >
@@ -50,7 +51,11 @@ function Location() {
             </div>
           </div>
         </article>
-        <article data-aos="fade-left" className="location-img canada">
+        <article
+          style={{ overflow: "hidden" }}
+          data-aos="fade-left"
+          className="location-img canada"
+        >
           <LocationMap cordinate={canadaCoordinates} />
         </article>
       </section>
@@ -83,7 +88,11 @@ function Location() {
       </section>
 
       <section className="country-container">
-        <article data-aos="fade-right" className="UK-container-info general">
+        <article
+          style={{ overflow: "hidden" }}
+          data-aos="fade-right"
+          className="UK-container-info general"
+        >
           <h1>United Kingdom</h1>
           <div className="country-info-container">
             <div className="country-info">
